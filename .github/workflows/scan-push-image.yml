@@ -12,13 +12,13 @@ jobs:
 
       - name: Build image
         run: |
-          docker build . -t raksmeyjr/student:latest
-          docker build . -t raksmeyjr/student:${{ github.sha }}
+          docker build . -t malynet/studyspace:latest
+          docker build . -t rmalynet/studyspace:${{ github.sha }}
 
       - name: Run Trivy scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: raksmeyjr/student:${{ github.sha }}
+          image-ref: malynet/studyspace:${{ github.sha }}
           severity: CRITICAL
           format: table
           output: console
@@ -33,5 +33,5 @@ jobs:
       - name: Push image to Docker Hub
         run: |
           echo "Push image to Docker Hub..."
-          docker push raksmeyjr/student:latest
-          docker push raksmeyjr/student:${{ github.sha }}
+          docker push malynet/studyspace:latest
+          docker push malynet/studyspace:${{ github.sha }}
