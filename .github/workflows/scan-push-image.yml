@@ -13,7 +13,7 @@ jobs:
       - name: Build image
         run: |
           docker build . -t malynet/studyspace:latest
-          docker build . -t rmalynet/studyspace:${{ github.sha }}
+          docker build . -t malynet/studyspace:${{ github.sha }}
 
       - name: Run Trivy scan
         uses: aquasecurity/trivy-action@master
