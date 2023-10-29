@@ -9,7 +9,7 @@ namespace Repositories
         private readonly List<Person> people = new()
         {
             new Person {Id = Guid.NewGuid(),Name = "Raksmey",Gender = "M",CreatedDate = DateTimeOffset.UtcNow},
-            new Person {Id = Guid.NewGuid(),Name = "Raksmy",Gender = "F",CreatedDate = DateTimeOffset.UtcNow},
+            new Person {Id = Guid.NewGuid(),Name = "malynet",Gender = "F",CreatedDate = DateTimeOffset.UtcNow},
         };
 
        
